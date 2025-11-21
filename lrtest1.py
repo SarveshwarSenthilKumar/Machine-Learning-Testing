@@ -3,6 +3,10 @@ import numpy as np
 import pandas as pd
 from math import log
 from sklearn import linear_model
+import seaborn as sns
+
+# Set style for better looking plots
+sns.set(style="whitegrid")
 
 #Copied from https://github.com/mrandrewandrade/TER/blob/main/2025-11-19-Linear-Regression-Tutorial.md
 
@@ -27,12 +31,45 @@ print("Residual sum of squares: %.2f"
 # Explained variance score: 1 is perfect prediction
 print('Variance score: %.2f' % regr_i.score(X, y))
 
-plt.plot(X,regr_i.predict(X), color='green',
-         linewidth=3)
+# Calculate predictions first
+predictions = regr_i.predict(X)
+residuals = y - predictions
 
-plt.scatter(anscombe_i.x, anscombe_i.y,  color='black')
+# Create a figure with two subplots
+plt.figure(figsize=(15, 6))
 
-plt.ylabel("X")
-plt.xlabel("y")
+# First subplot: Regression line with data points and residual lines
+plt.subplot(1, 2, 1)
+plt.scatter(anscombe_i.x, anscombe_i.y, color='black', label='Data points')
+plt.plot(X, predictions, color='green', linewidth=3, label='Regression line')
 
+# Add vertical lines showing residuals
+for xi, yi, pred in zip(X, y, predictions):
+    plt.plot([xi[0], xi[0]], [yi[0], pred[0]], 'b-', alpha=0.7, linewidth=1.5, zorder=1)
+# Add a single line to the legend for residuals
+plt.plot([], [], 'b-', alpha=0.7, linewidth=1.5, label='Residuals')
+
+plt.title('Linear Regression Fit with Residuals')
+plt.xlabel('X')
+plt.ylabel('y')
+plt.legend()
+
+# Second subplot: Residual plot
+plt.subplot(1, 2, 2)
+plt.scatter(predictions, residuals, color='blue', alpha=0.7)
+plt.axhline(y=0, color='red', linestyle='--')
+plt.title('Residual Plot')
+plt.xlabel('Predicted values')
+plt.ylabel('Residuals')
+
+plt.tight_layout()
+plt.show()
+
+# Create a separate figure for the histogram of residuals
+plt.figure(figsize=(8, 6))
+sns.histplot(residuals, kde=True, color='purple', bins=15)
+plt.title('Distribution of Residuals')
+plt.xlabel('Residuals')
+plt.ylabel('Frequency')
+plt.axvline(x=0, color='red', linestyle='--')
 plt.show()
