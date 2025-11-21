@@ -11,4 +11,5 @@ model.fit(hours, scores)     # train the model
 print(model.coef_)  # print the coefficients
 print(model.intercept_)  # print the intercept
 
-print(model.predict([[6]]))  # predict score for 6 hours study
+toPredict = int(input(": "))
+print(model.predict([[toPredict]]))
