@@ -1,0 +1,5 @@
+To Do:
+Kinesiology Project
+Store Sold-Out Cost
+
+Research Polynomial Regression
