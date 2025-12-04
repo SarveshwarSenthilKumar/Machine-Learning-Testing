@@ -1,5 +1,6 @@
 To Do:
 Kinesiology Project
 Store Sold-Out Cost
+Add other AI CS notes to this folder
 
 Research Polynomial Regression
