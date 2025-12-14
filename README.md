@@ -17,7 +17,15 @@ Welcome to my machine learning testing repository! This is a personal space wher
      - Distribution of residuals
    - Uses pandas for data manipulation and seaborn for enhanced visualizations
 
-3. **data/tests/anscombe_i.csv**
+3. **polynomialregression.py**
+   - Implements polynomial regression using scikit-learn
+   - Features include:
+     - Customizable polynomial degree
+     - Model evaluation metrics (MSE, R² score)
+     - Data visualization
+     - Sample data generation with customizable noise
+
+4. **data/tests/anscombe_i.csv**
    - Part of the Anscombe's quartet dataset
    - Used in lrtest1.py for regression analysis
    - Demonstrates important statistical properties of linear regression
@@ -33,7 +41,19 @@ Welcome to my machine learning testing repository! This is a personal space wher
    ```
    pip install -r requirements.txt
    ```
-3. Run the Python scripts to see the machine learning models in action
+3. Run the Python scripts to see the machine learning models in action:
+   ```
+   # Run polynomial regression
+   python polynomialregression.py
+   ```
+   
+   The script will:
+   - Generate sample data with a polynomial relationship
+   - Train a polynomial regression model (default: 3rd degree)
+   - Display evaluation metrics (MSE and R² score)
+   - Show a plot of the regression line
+
+   You can adjust the polynomial degree by modifying the `degree` parameter in the `main()` function.
 
 ## 🔍 About Me
 
