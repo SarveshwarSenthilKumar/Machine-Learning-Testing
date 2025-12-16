@@ -9,7 +9,16 @@ Welcome to my machine learning testing repository! This is a personal space wher
 
 ## 📁 Repository Contents
 
-1. **linearregression.py**
+1. **finitedifferences.py**
+   - Implements finite difference method for polynomial degree detection
+   - Features include:
+     - Calculation of finite differences for a sequence until differences become constant
+     - Automatic detection of polynomial degree
+     - Formatted output of the difference table
+     - Example usage with quadratic function (x²)
+   - Useful for numerical analysis and understanding polynomial behavior
+
+2. **linearregression.py**
    - A simple implementation of linear regression using scikit-learn
    - Predicts scores based on study hours using a small dataset
    - Includes model training, coefficient analysis, and prediction functionality
