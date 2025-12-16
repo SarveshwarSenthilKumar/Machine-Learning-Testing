@@ -2,6 +2,11 @@
 
 Welcome to my machine learning testing repository! This is a personal space where I experiment with various machine learning concepts, algorithms, and techniques. Feel free to explore the code and learn alongside me as I dive into the world of machine learning.
 
+## 🤝 Connect with Me
+
+- [LinkedIn](https://www.linkedin.com/in/sarveshwarsenthilkumar)
+- Feel free to connect with me for collaborations or discussions about machine learning!
+
 ## 📁 Repository Contents
 
 1. **linearregression.py**
