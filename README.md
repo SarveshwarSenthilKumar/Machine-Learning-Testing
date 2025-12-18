@@ -9,7 +9,18 @@ Welcome to my machine learning testing repository! This is a personal space wher
 
 ## 📁 Repository Contents
 
-1. **finitedifferences.py**
+1. **neural_network.py**
+   - A simple feedforward neural network implementation using PyTorch
+   - Features include:
+     - Customizable architecture (input/hidden/output layers)
+     - Training on MNIST dataset
+     - Model evaluation with accuracy metrics
+     - Training loss visualization
+     - GPU support (if available)
+   - Demonstrates fundamental deep learning concepts
+   - Saves training loss plot to 'training_loss.png'
+
+2. **finitedifferences.py**
    - Implements finite difference method for polynomial degree detection
    - Features include:
      - Calculation of finite differences for a sequence until differences become constant
