@@ -29,12 +29,12 @@ Welcome to my machine learning testing repository! This is a personal space wher
      - Example usage with quadratic function (x²)
    - Useful for numerical analysis and understanding polynomial behavior
 
-2. **linearregression.py**
+3. **linearregression.py**
    - A simple implementation of linear regression using scikit-learn
    - Predicts scores based on study hours using a small dataset
    - Includes model training, coefficient analysis, and prediction functionality
 
-2. **lrtest1.py**
+4. **lrtest1.py**
    - An advanced linear regression example using the Anscombe's quartet dataset
    - Features comprehensive visualization including:
      - Regression line with residuals
@@ -42,7 +42,7 @@ Welcome to my machine learning testing repository! This is a personal space wher
      - Distribution of residuals
    - Uses pandas for data manipulation and seaborn for enhanced visualizations
 
-3. **polynomialregression.py**
+5. **polynomialregression.py**
    - Implements polynomial regression using scikit-learn
    - Features include:
      - Customizable polynomial degree
